@@ -30,7 +30,7 @@
           <!-- //Your ICON -->
         </button>
         <div class="collapse navbar-collapse"   id="navbarNav">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm-center text-lg-start">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
             <li @click="handleLink"  class="nav-item" v-for="link in links" :key="link">
               <a class="nav-link " aria-current="page" href="#">{{link}}</a>
             </li>

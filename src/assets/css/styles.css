@@ -5,9 +5,7 @@
   margin: 0;
   padding: 0;
 }
-#app{
-  height: 4000px;
-}
+
 html{
   scroll-behavior: smooth;
 }
