@@ -22,10 +22,11 @@ html{
 }
 a,a:hover{
   text-decoration: none;
+  
 
 }
 a:hover{
-  color: green !important;
+  color: var(--secondary-color) !important;
 }
 ul,ol{
   margin: 0;
@@ -51,7 +52,7 @@ h1{
   margin-bottom: 3rem;
   font-weight: 900;
   text-transform: capitalize;
-  font-family: var(--secondary-font);
+ color: var(--secondary-color);
 
 }
 h2{

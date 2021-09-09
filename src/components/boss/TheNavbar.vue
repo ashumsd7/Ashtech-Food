@@ -2,12 +2,14 @@
   <header>
     <nav
       class="
-        navbar navbar-expand-lg
+        navbar navbar-expand-lg bg-white
         position-fixed
         w-100
         start-0
         navigation-wrap
       "
+      :class="{onScroll:addNavShadow}"
+
     >
       <div class="container">
         <a class="navbar-brand" href="#"
@@ -29,20 +31,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Get Foods</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reviews</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">FAQs</a>
+            <li class="nav-item" v-for="link in links" :key="link">
+              <a class="nav-link " aria-current="page" href="#">{{link}}</a>
             </li>
             <li class="nav-item">
               <button class="main-btn">+123 456789</button>
@@ -55,7 +45,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      links:['Home','About Us', 'Get Food','Reviews', 'FAQ'],
+      addNavShadow:false
+    }
+  },
+  mounted() {
+    window.onscroll= ()=>{
+      if(window.scrollY>50){
+          this.addNavShadow= true;
+      }
+      if(window.scrollY<20){
+         this.addNavShadow= false;
+      }
+    }
+  },
+};
 </script>
 
 <style  scoped>
@@ -99,13 +106,13 @@ export default {};
     margin-left: .625rem;
 }
 /* //USED IN SCROLL : CHNAGE NAV BAR STYLE ON SCROLL */
-.navigation-wrap.scroll-on{
+.navigation-wrap.onScroll{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background:var(--white-color);
-    box-shadow:  0 0.125rem  1.7rem 0 rgba(0, 0, 0, .9);
+    box-shadow:  0 0.125rem  1.7rem 0 rgba(0, 0, 0, .5);
     transition: all .5s ease-in-out 0s;
 
 }
