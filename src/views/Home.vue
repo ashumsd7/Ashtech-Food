@@ -13,13 +13,16 @@ import TheNavbar from '../components/boss/TheNavbar.vue'
 import TopBanner from '../components/HomeViews/TopBanner.vue'
 import Counter from '../components/HomeViews/Counter.vue'
 
+
 export default {
   name: 'Home',
   components:{
     TheNavbar,
     TopBanner,
-    Counter
+    Counter,
   }
 
 }
 </script>
+
+

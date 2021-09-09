@@ -29,9 +29,9 @@
           <img src="../../assets/menu.png" alt="" srcset="" />
           <!-- //Your ICON -->
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item" v-for="link in links" :key="link">
+        <div class="collapse navbar-collapse"   id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm-center text-lg-start">
+            <li @click="handleLink"  class="nav-item" v-for="link in links" :key="link">
               <a class="nav-link " aria-current="page" href="#">{{link}}</a>
             </li>
             <li class="nav-item">
@@ -49,18 +49,21 @@ export default {
   data() {
     return {
       links:['Home','About Us', 'Get Food','Reviews', 'FAQ'],
-      addNavShadow:false
+      addNavShadow:false,
+      
     }
   },
   mounted() {
     window.onscroll= ()=>{
-      if(window.scrollY>50){
-          this.addNavShadow= true;
-      }
-      if(window.scrollY<20){
-         this.addNavShadow= false;
-      }
+      window.scrollY>50 ? this.addNavShadow= true : this.addNavShadow= false
+     
     }
+  },
+  methods: {
+    //on click closing list nav on mobile
+    handleLink(e){
+   e.path[3].classList.remove('show')
+  }
   },
 };
 </script>

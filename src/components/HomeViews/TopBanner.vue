@@ -30,7 +30,7 @@
  /* @import '../../assets/css/responsive.css'; */
 .top-banner{
     width: 100%;
-    background-image: url('../../assets/img/bg/bg-1.jpg');
+    background: url('../../assets/img/bg/bg-1.jpg') center no-repeat;
     background-size: cover;
     padding: 16.8rem 0 9.375rem;
 }
@@ -42,4 +42,25 @@ h1{
  color: var(--secondary-color);
 
 }
+@media(max-width:968px) {
+    .top-banner{
+        padding: 9.3rem 0 9.3rem;
+    }
+    
+}
+
+@media (max-width:768px){
+h1{
+    font-size: 2.8rem;
+
+}
+h2{
+    font-size: 2rem;
+    line-height: 2.0rem;
+}
+.top-banner{
+    padding: 10.8rem 0 9.375rem;
+}
+}
+
 </style>
