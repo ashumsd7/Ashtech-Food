@@ -3,14 +3,15 @@
       <section class="counter-section">
           <div class="container">
               <div class="row text-center">
+                  
 
                   <div v-for="item in counterData" :key="item.title" class="col-md-3 mb-lg-0 mb-md-0 mb-5">
                       <h2>
                           <span id="count1">
-                              {{ item.Count}}
+                              <VueJsCounter thousand="," :end="item.count"></VueJsCounter>
                           </span>
                       </h2>
-                      <p>{{item.title}}</p>
+                     <p><strong>{{item.title}}</strong></p> 
                   </div>
 
 
@@ -24,14 +25,18 @@
 </template>
 
 <script>
+import VueJsCounter from 'vue-js-counter'
     export default {
+         components: {
+            VueJsCounter 
+        },
         data() {
             return {
                  counterData:[
-                     {title:'Orders', Count:'12345+'},
-                     {title:'Pincodes', Count:'100+'},
-                     {title:'Reached', Count:'2500+'},
-                     {title:'Counting', Count:'1000+'},
+                     {title:'Orders', count:3421},
+                     {title:'Pincodes', count:150},
+                     {title:'Reached', count:2500},
+                     {title:'Counting', count:1000},
                  ]
             }
         },
