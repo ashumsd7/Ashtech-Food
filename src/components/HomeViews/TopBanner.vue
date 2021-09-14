@@ -5,10 +5,10 @@
           <div class="container">
               <div class="row">
                   <div class="col-lg-5 col-md-6">
-                      <h1 class="h1">Take Healthy Food, Live Healthy</h1>
+                      <h1 class="h1">Eat Healthy Food, Live Healthy Life</h1>
                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                  <div class="mt-4">
-                     <button class="main-btn">Explore Food <i class="fas fa-play"></i> </button>
+                     <button class="main-btn me-lg-1">Explore Food <i class="fas fa-play"></i> </button>
                      <button class="white-btn ms-lg-4 mt-lg-0">Order Now <i class="fas fa-shopping-cart"></i></button>
                      
                  </div>

@@ -3,6 +3,8 @@
   <the-navbar></the-navbar>
   <top-banner></top-banner>
   <Counter></Counter>
+  <About></About>
+  <Story/>
   </div>
 </template>
 
@@ -12,6 +14,8 @@
 import TheNavbar from '../components/boss/TheNavbar.vue'
 import TopBanner from '../components/HomeViews/TopBanner.vue'
 import Counter from '../components/HomeViews/Counter.vue'
+import About from '../components/HomeViews/About.vue'
+import Story from '../components/HomeViews/Story.vue'
 
 
 export default {
@@ -20,6 +24,7 @@ export default {
     TheNavbar,
     TopBanner,
     Counter,
+    About,Story
   }
 
 }
