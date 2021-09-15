@@ -5,6 +5,8 @@
   <Counter></Counter>
   <About></About>
   <Story/>
+ <explore></explore>
+ <client-slider></client-slider>
   </div>
 </template>
 
@@ -16,6 +18,9 @@ import TopBanner from '../components/HomeViews/TopBanner.vue'
 import Counter from '../components/HomeViews/Counter.vue'
 import About from '../components/HomeViews/About.vue'
 import Story from '../components/HomeViews/Story.vue'
+import Explore from '../components/HomeViews/Explore.vue'
+import ClientSlider from '../components/HomeViews/ClientSlider.vue'
+
 
 
 export default {
@@ -24,7 +29,9 @@ export default {
     TheNavbar,
     TopBanner,
     Counter,
-    About,Story
+    About,Story,Explore,
+    ClientSlider
+   
   }
 
 }
